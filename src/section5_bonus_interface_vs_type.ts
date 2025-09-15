@@ -4,3 +4,25 @@
 // Add a comment explaining when you might use one over the other.
 
 // Your code here 👇
+
+// For modeling objects
+interface ShapeInterface {
+  width: number;
+  height: number;
+}
+
+// For creating flexible types
+type ShapeType = {
+  width: number;
+  height: number;
+};
+
+const shapeA: ShapeInterface = {
+  width: 5,
+  height: 5,
+};
+
+const shapeB: ShapeType = {
+  width: 10,
+  height: 10,
+};
