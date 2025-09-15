@@ -1,6 +1,19 @@
-// BONUS TASK:
-// Create a variable called shapeA using an interface and another variable called shapeB using a type alias:
-// - Each should define a Shape with width: number and height: number
-// Add a comment explaining when you might use one over the other.
+interface ShapeInterface {
+  width: number,
+  height: number
+}
 
-// Your code here 👇
+type ShapeType = {
+  width: number,
+  height: number
+}
+
+const shapeA: ShapeInterface = {
+  width: 1,
+  height: 1
+}
+
+const shapeB: ShapeType = {
+  width: 1,
+  height: 1
+}

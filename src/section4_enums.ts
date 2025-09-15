@@ -7,3 +7,12 @@
 // - returns a string like "Moving Up"
 
 // Your code here 👇
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+const move = (input: Direction): string => `Moving ${Direction[input]}`;
