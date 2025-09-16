@@ -6,3 +6,15 @@
 // Then, create a variable called myBook of type Book and assign it a valid object.
 
 // Your code here 👇
+
+interface Book {
+  title: string
+  author: string
+  pages: number
+}
+
+let myBook: Book = {
+  title: "Way of Kings",
+  author: "Brandon Sanderson",
+  pages: 1000,
+}
