@@ -15,6 +15,7 @@ enum Direction {
   Left = "Left",
   Right = "Right",
 }
+
 function move(direction: Direction): string {
   return "Moving ".concat(direction);
 }
