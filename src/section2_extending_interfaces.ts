@@ -8,3 +8,20 @@
 // Finally, create a variable employee1 of type Employee.
 
 // Your code here 👇
+
+interface Person {
+  name: string
+  age: number
+}
+
+interface Employee extends Person {
+  jobTitle: string
+  department: string
+}
+
+const employee1: Employee = {
+  name: "Jim Halpert",
+  age: 35,
+  jobTitle: "Paper Salesman",
+  department: "Sales",
+}
