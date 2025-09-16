@@ -1,4 +1,3 @@
-
 // TASK:
 // Define an enum called Direction with these values:
 // - Up, Down, Left, Right
@@ -7,3 +6,15 @@
 // - returns a string like "Moving Up"
 
 // Your code here 👇
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+function move(direction: Direction): string {
+  const names = ["Up", "Down", "Left", "Right"]
+  return `Moving ${names[direction]}`
+}
