@@ -4,3 +4,16 @@
 // Add a comment explaining when you might use one over the other.
 
 // Your code here 👇
+interface ShapeInterface {
+  width: number
+  height: number
+}
+
+type ShapeType = {
+  width: number
+  height: number
+}
+
+const shapeA: ShapeInterface = { width: 8, height: 4 }
+
+const shapeB: ShapeType = { width: 8, height: 4 }
