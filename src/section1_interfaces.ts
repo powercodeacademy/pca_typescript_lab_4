@@ -6,3 +6,14 @@
 // Then, create a variable called myBook of type Book and assign it a valid object.
 
 // Your code here 👇
+interface Book {
+  title: string
+  author: string
+  pages: number
+}
+
+const myBook: Book = {
+  title: 'hi',
+  author: 'bye',
+  pages: 4
+}
