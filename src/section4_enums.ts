@@ -1,8 +1,6 @@
-
-// TASK:
-// Define an enum called Direction with these values:
+// Define an enum called Direction with:
 // - Up, Down, Left, Right
-// Then, write a function move that:
+// Then write a function move that:
 // - takes a Direction as an argument
 // - returns a string like "Moving Up"
 
