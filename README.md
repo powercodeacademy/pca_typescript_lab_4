@@ -18,14 +18,14 @@ By the end of this lab, you'll be comfortable with:
 
 ## Getting Started
 
-First, fork and clone the repository and let's set up your environment:
+First, clone this repository to your local machine and install the required dependencies:
 
 ```bash
 npm install
 npm test
 ```
 
-The tests will guide you through each concept. Don't worry if they fail initially—that's how you'll learn what TypeScript expects!
+You should see test output showing which tests are passing and failing. Don't worry if tests are failing initially - that's expected! You'll be implementing the code to make them pass.
 
 ---
 
@@ -62,7 +62,19 @@ let myBook: Book = {
 
 The interface acts like a contract. Any object that claims to be a `Book` must have exactly these properties with these types. If you try to create a book without a `title` or with a `pages` property that's a string instead of a number, TypeScript will catch the error.
 
-**Try it yourself:** Open `src/section1_interfaces.ts` and define a `Book` interface with `title`, `author`, and `pages` properties. Then create a `myBook` variable that follows this interface.
+### Practice: Interface Definitions
+
+**Your Task**: Open `src/section1_interfaces.ts` and complete the following:
+
+1. Define a `Book` interface with:
+
+   - `title`: string
+   - `author`: string
+   - `pages`: number
+
+2. Create a `myBook` variable that follows this interface
+
+**Hint**: Use the `interface` keyword to define the shape, then create a variable with the `: Book` type annotation.
 
 ---
 
@@ -108,7 +120,23 @@ interface Duck extends Flyable, Swimmable {
 }
 ```
 
-**Your turn:** In `src/section2_extending_interfaces.ts`, create a `Person` interface with `name` and `age`, then create an `Employee` interface that extends `Person` and adds `jobTitle` and `department`.
+### Practice: Extending Interfaces
+
+**Your Task**: Open `src/section2_extending_interfaces.ts` and complete the following:
+
+1. Create a `Person` interface with:
+
+   - `name`: string
+   - `age`: number
+
+2. Create an `Employee` interface that extends `Person` and adds:
+
+   - `jobTitle`: string
+   - `department`: string
+
+3. Create an `employee` variable that follows the `Employee` interface
+
+**Hint**: Use the `extends` keyword to inherit from the `Person` interface. The `Employee` will have all `Person` properties plus the new ones.
 
 ---
 
@@ -148,7 +176,14 @@ function move(
 }
 ```
 
-**Challenge:** In `src/section3_tuples.ts`, create a `Point` tuple type and a `destination` variable set to `[0, 0]`.
+### Practice: Tuples
+
+**Your Task**: Open `src/section3_tuples.ts` and complete the following:
+
+1. Create a `Point` tuple type that represents 2D coordinates
+2. Create a `destination` variable of type `Point` set to `[0, 0]`
+
+**Hint**: Use square brackets `[number, number]` to define a tuple type. The first position is the x-coordinate, the second is the y-coordinate.
 
 ---
 
@@ -209,7 +244,32 @@ function move(direction: Direction): string {
 }
 ```
 
-**Your turn:** In `src/section4_enums.ts`, create a `Direction` enum with `Up`, `Down`, `Left`, and `Right`, then write a `move` function that takes a `Direction` and returns a string message.
+### Practice: Enums
+
+**Your Task**: Open `src/section4_enums.ts` and complete the following:
+
+1. Create a `Direction` enum with:
+
+   - `Up`
+   - `Down`
+   - `Left`
+   - `Right`
+
+2. Write a `move` function that:
+   - Takes a `Direction` parameter
+   - Returns a string message based on the direction
+   - Use a switch statement to handle each direction
+
+**Expected behavior**:
+
+```typescript
+console.log(move(Direction.Up)) // "Moving up"
+console.log(move(Direction.Down)) // "Moving down"
+console.log(move(Direction.Left)) // "Moving left"
+console.log(move(Direction.Right)) // "Moving right"
+```
+
+**Hint**: Use the `enum` keyword to define your enum, then use `Direction.Up`, `Direction.Down`, etc. to access the values.
 
 ---
 
@@ -253,7 +313,20 @@ interface AdminUser extends User {
 }
 ```
 
-**Bonus challenge:** In `src/section5_bonus_interface_vs_type.ts`, create the same shape using both an interface and a type alias, then add a comment explaining when you'd choose each approach.
+### Practice: Interfaces vs Type Aliases (Bonus Challenge)
+
+**Your Task**: Open `src/section5_bonus_interface_vs_type.ts` and complete the following:
+
+1. Create the same object shape using both an interface and a type alias:
+
+   - `id`: number
+   - `name`: string
+   - `email`: string
+
+2. Create variables using both approaches
+3. Add a comment explaining when you'd choose each approach
+
+**Hint**: Both approaches create the same shape, but interfaces are better for extensibility while type aliases are better for unions and complex types.
 
 ---
 
@@ -270,10 +343,6 @@ Interfaces, tuples, and enums are fundamental to writing maintainable TypeScript
 These concepts are especially important when working with APIs, databases, or any situation where you need to ensure data consistency across your application.
 
 ---
-
-## Ready to Start?
-
-Open `src/section1_interfaces.ts` and begin! The tests will guide you through each concept. Remember: TypeScript is here to help you write better code by catching errors early. Embrace the red squiggly lines—they're your friends! 🚀
 
 ### Common Troubleshooting
 
